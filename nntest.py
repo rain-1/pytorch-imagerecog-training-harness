@@ -1,7 +1,10 @@
 import torch
 
-from dataset.cifar10.dataset import trainloader, testloader
-from models.cifar10tutorial.model import Model
+#from dataset.cifar10.dataset import trainloader, testloader
+#from models.cifar10tutorial.model import Model
+
+from dataset.mnist.dataset import trainloader, testloader
+
 
 from itertools import islice
 
@@ -16,7 +19,7 @@ def nntest(epoch, model, use_wandb=False):
     val_loss = 0
     total = 0
     correct = 0
-    
+
     with torch.no_grad():
         # Only evaluate on a fraction of validation data
 
@@ -45,9 +48,9 @@ def nntest(epoch, model, use_wandb=False):
     
     return val_accuracy
 
-if __name__ == "__main__":
-    model = Model()
-    model.load("checkpoints/cifar_net.pth")
-    model.to(device)
+# if __name__ == "__main__":
+#     model = Model()
+#     model.load("checkpoints/cifar_net.pth")
+#     model.to(device)
 
-    nntest(model)
+#     nntest(model)
