@@ -1,0 +1,1 @@
+this is basic generic neural network training code which can be used for MNIST, CIFAR10 (tutorial net that only gets 50% and a bigger resnet that gets 70%), and potentially looking towards ImageNet (not implemented)
