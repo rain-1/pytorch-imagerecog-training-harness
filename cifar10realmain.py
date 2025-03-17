@@ -8,13 +8,12 @@ from torchvision import datasets, transforms
 from tqdm import tqdm
 import wandb
 
-from dataset.cifar10.dataset import trainloader, testloader
-from models.cifar10real.model import Model
 from utilities.load_latest_checkpoint import load_latest_checkpoint
 
 from trainer import Trainer
 
 ########
+from models.cifar10real.model import Model
 import dataset.cifar10.dataset as dataset
 network_run_name = "cifar10-real"
 
